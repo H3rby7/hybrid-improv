@@ -1,5 +1,6 @@
 (function() {
   const prj = document.querySelector("#projection");
+  const prjDegLabel = document.querySelector("#prjDegLabel");
   let prjSide = 'right';
 
   function changeProjectionSide(val) {
@@ -34,6 +35,7 @@
   function changeProjectionAngle(val) {
     const orientation = isRight() ? "-" : ""
     prj.style.transform = `rotateX(-90deg) rotateY(${orientation}${val}deg)`;
+    prjDegLabel.innerHTML = `Projection angle (${val}°)`;
   }
   changeProjectionAngle(document.querySelector("#prjDeg").value);
 

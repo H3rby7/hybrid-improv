@@ -26,10 +26,10 @@
       </div>
       <div class="option">
         <label for="prjDist">Projection distance</label>
-        <input id="prjDist" type="range" value="210" min="0" max="450" step="30">
+        <input id="prjDist" type="range" value="210" min="0" max="500" step="10">
       </div>
       <div class="option">
-        <label for="prjDeg">Projection angle</label>
+        <label id="prjDegLabel" for="prjDeg">Projection angle</label>
         <input id="prjDeg" type="range" value="40" min="0" max="90" step="2">
       </div>
     </div>
@@ -43,7 +43,7 @@
             <div id="stage-right"></div>
           </div>
           <div id="projection" class="right">
-            <video id="localVideo" autoplay playsinline controls="false"></video>
+            <video id="localVideo" autoplay playsinline></video>
             <script lang="javascript">
               playLocal('#localVideo');
             </script>
