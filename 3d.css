@@ -4,10 +4,10 @@ body {
 }
 
 #three-d {
-  position: relative;
-  width: 1280px;
-  height: 800px;
-  background-color: black;
+  position: static;
+  width: 1120px;
+  height: 630px;
+  background-color: #666;
   overflow: hidden;
 }
 
@@ -20,21 +20,26 @@ body {
   width: 100%;
   height: 100%;
   transform: 
-    perspective(300px) 
+    perspective(500px) 
     rotateX(80deg) 
-    translateY(-50px) 
+    translateY(-100px)
+    translateZ(-50px)
     translateX(10%);
 }
 
 /* 100px = 100cm */
+
+#scene {
+  position: relative;
+}
 
 /*************************************************************************************************/
 /************************************** S T A G E ************************************************/
 /*************************************************************************************************/
 
 #stage {
-  position: relative;
-  width: 1000px;
+  position: absolute;
+  width: 800px;
   height: 700px;
   transform:
     translate3d(0px, 0px, 0px);
@@ -44,12 +49,12 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #333;
+  background-color: #222;
 }
 
 #stage-front, #stage-left, #stage-right {
   position: absolute;
-  background-color: #222;
+  background-color: #111;
 }
 
 #stage-front {
@@ -98,14 +103,14 @@ body {
 }
 
 #projection.left {
-  left: 50px;
+  left: 0px;
   transform:
     rotateX(-90deg)
     rotateY(40deg);
 }
 
 #projection.right {
-  right: 280px;
+  left: 500px;
   transform:
     rotateX(-90deg)
     rotateY(-40deg);

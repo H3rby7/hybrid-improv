@@ -1,19 +1,19 @@
 body {
   margin: 0;
   padding: 1rem;
-}
-
-#layout {
-  display: flex;
-  flex-direction: row;
+  overflow: hidden;
   width: 100vw;
 }
 
+#layout {
+  width: 100%;
+}
+
 #controls {
-  width: 400px;
+  width: 300px;
+  float: left;
 }
 
 #controls .option {
-  display: block;
   width: 100%;
 }

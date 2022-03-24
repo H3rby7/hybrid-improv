@@ -27,19 +27,20 @@
     </div>
     <div id="three-d">
       <div id="audience-view">
-        <div id="stage">
-          <div id="stage-floor"></div>
-          <div id="stage-front"></div>
-          <div id="stage-left"></div>
-          <div id="stage-right"></div>
+        <div id="scene">
+          <div id="stage">
+            <div id="stage-floor"></div>
+            <div id="stage-front"></div>
+            <div id="stage-left"></div>
+            <div id="stage-right"></div>
+          </div>
+          <div id="projection" class="right">
+            <video id="localVideo" autoplay playsinline controls="false"></video>
+            <script lang="javascript">
+              playLocal('#localVideo');
+            </script>
+          </div>
         </div>
-        <div id="projection" class="right">
-          <video id="localVideo" autoplay playsinline controls="false"></video>
-          <script lang="javascript">
-            playLocal('#localVideo');
-          </script>
-        </div>
-        <div id="yourself"></div>
       </div>
     </div>
   </div>
