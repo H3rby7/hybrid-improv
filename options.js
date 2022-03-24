@@ -1,6 +1,6 @@
 (function() {
-  function changeProjectionLocation(val) {
-    const prj = document.querySelector("#projection");
+  const prj = document.querySelector("#projection");
+  function changeProjectionSide(val) {
     prj.classList.remove("left", "right");
     prj.classList.add(val);
 
@@ -12,7 +12,15 @@
     }
   }
   document.querySelector("#prjLR").addEventListener('input', ({target: {value: val}}) => {
-    changeProjectionLocation(val);
+    changeProjectionSide(val);
   })
-  changeProjectionLocation(document.querySelector("#prjLR").value);
+  changeProjectionSide(document.querySelector("#prjLR").value);
+
+  document.querySelector("#prjDist").addEventListener('input', ({target: {value: val}}) => {
+    changeProjectionDistance(val);
+  }) 
+  function changeProjectionDistance(val) {
+    prj.style.top = val + "px";
+  }
+  changeProjectionDistance(document.querySelector("#prjDist").value);
 })()
