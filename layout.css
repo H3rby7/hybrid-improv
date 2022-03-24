@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  padding: 1rem;
+}
+
+#layout {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+}
+
+#controls {
+  width: 400px;
+}
+
+#controls .option {
+  display: block;
+  width: 100%;
+}
