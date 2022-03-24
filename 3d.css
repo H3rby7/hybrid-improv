@@ -1,0 +1,74 @@
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+#three-d {
+  position: relative;
+  width: 1280px;
+  height: 800px;
+  background-color: black;
+  overflow: hidden;
+}
+
+#three-d * {
+  transform-style: preserve-3d;
+}
+
+#audience-view {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: 
+    perspective(1000px)
+    translateX(10%)
+    rotateX(60deg);
+}
+
+#stage {
+  position: relative;
+  width: 1000px;
+  height: 700px;
+  transform:
+    translate3d(0px, -300px, 0px);
+}
+
+#stage-floor {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+}
+
+#stage-front, #stage-left, #stage-right {
+  position: absolute;
+  background-color: #222;
+}
+
+#stage-front {
+  width: 100%;
+  height: 100px;
+  bottom: 0;
+  transform: 
+    rotateX(90deg);
+  transform-origin: bottom;
+}
+
+#stage-left, #stage-right {
+  width: 100px;
+  height: 100%;
+}
+
+#stage-left {
+  left: 0;
+  transform-origin: left;
+  transform: 
+    rotateY(90deg);
+}
+
+#stage-right {
+  right: 0;
+  transform-origin: right;
+  transform: 
+    rotateY(-90deg);
+}
